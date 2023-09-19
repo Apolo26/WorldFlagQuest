@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="game.css">
+  <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+
+  <title>WORLD FLAG QUEST</title>
+</head>
+
+<body>
+  <!--Background Nubes-->
+  <div class="background-wrapper">
+    <div id="cloud-intro"></div>
+  </div>
+  <section class="pixel-border">
+    <!--Boton home-->
+    <a href="../index.html" class="home-button">
+      <img src="../assets/home.png" alt="Home">
+    </a>
+
+    <!--Boton audio-->
+    <audio id="soundButton">
+      <source src="../assets/backgroundMp3.mp3" type="audio/mpeg" loop>
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <div class="music-control">
+      <img src="../assets/ON.png" alt="Music Control" id="musicButton">
+    </div>
+
+    <!-- INPUT USUARIO -->
+    <form action="/save-nick" method="POST" class="arcade-form" id="nick-form">
+      <label for="nick">INTRODUCI TU USUARIO</label>
+      <input type="text" id="nick" name="nick" required>
+      <input type="hidden" id="score" name="score" value="0">
+      <input type="hidden" id="time" name="time" value="0">
+      <button type="submit" id="guardar-btn">GUARDAR</button>
+    </form>
+
+    <!-- Juego -->
+    <div id="question-wrapper" style="display: none;">
+      <div class="container" id="game-section" class="hidden">
+        <div class="question-container">
+          <p id="question"></p>
+          <img id="flag" src="" alt="Country Flag">
+          <div id="options" class="custom-options"></div>
+        </div>
+        <button id="next-btn" class="nes-btn" disabled>SIGUIENTE</button>
+        <div class="result" id="result"></div>
+        <div id="button-container" style="display: none;">
+          <button id="replay-btn" style="display: none;" class="nes-btn is-primary">REINTENTAR</button>
+          <button id="end-btn" style="display: none;" class="nes-btn is-error">FINALIZAR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para mostrar los mejores puntajes -->
+    <a id="show-leaderboard">
+      <img src="../assets/top-20.png" alt="top-20">
+    </a>
+    <div id="leaderboard-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="loader-container">
+          <p id="loading-text">CARGANDO...</p>
+          <img id="loader" src="../assets/loader.gif" alt="Loader" style="display: none;">
+        </div>
+        <div id="leaderboard"></div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="controls.js"></script>
+  <script type="module" src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+  <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css">
+  <title>WORLD FLAG QUEST</title>
+</head>
+
+<body>
+  <header>
+    <audio autoplay loop>
+      <source src="./assets/backgroundMp3.mp3" type="audio/mpeg">
+    </audio>
+    <div class="background-wrapper">
+      <div id="cloud-intro"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="titulo">
+      <span>WORLD FLAG</span>
+    </h1>
+    <h2 class="quest">QUEST</h2>
+    <audio id="soundButton">
+      <source src="./assets/soundButton.wav" type="audio/mpeg">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <button class="arcade" id="startButton" onclick="loadGamePage()">START</button>
+    <div id="loading" style="display: none; color: rgba(255, 249, 143, 0.933); font-size: 6vw;">Cargando...</div>
+  </main>
+
+  <div class="music-control">
+    <img src="./assets/ON.png" alt="Music Control" id="musicButton">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
