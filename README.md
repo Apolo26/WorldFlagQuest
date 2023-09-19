@@ -25,6 +25,9 @@ luego
 
 Deberás tener en cuenta que para utilizar este juego de manera ONLINE se necesitaria agregar tu propia base de datos.
 
+```bash
+MONGODB_URI = tu key
+```
 
 ## Start
 ```bash
