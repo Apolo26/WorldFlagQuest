@@ -4,6 +4,9 @@ const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("next-btn");
 const replayButton = document.getElementById("replay-btn");
 const resultElement = document.getElementById("result");
+const nickInput = document.getElementById("nick");
+const guardarButton = document.getElementById("guardar-btn");
+const errorMessage = document.getElementById("error-message");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -28,6 +31,20 @@ async function fetchCountries() {
     console.error("Error fetching countries:", error);
   }
 }
+
+// Evento del formulario
+nickInput.addEventListener("input", () => {
+  const nickValue = nickInput.value.trim();
+  if (nickValue.length >= 3 && /^[a-zA-Z][a-zA-Z0-9]*$/.test(nickValue)) {
+    guardarButton.disabled = false;
+    errorMessage.style.display = "none";
+  } else {
+    guardarButton.disabled = true;
+    errorMessage.innerHTML =
+      "Nombre no válido.<br>Debe comenzar con una letra y tener al menos 3 caracteres.";
+    errorMessage.style.display = "block";
+  }
+});
 
 // Funcion que muestra la siguiente pregunta
 async function showNextQuestion() {
@@ -166,6 +183,7 @@ function showResults() {
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log("que miras picaron jaja, acá esta la data");
         console.log(data);
       })
       .catch((error) => {

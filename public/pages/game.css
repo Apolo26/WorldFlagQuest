@@ -83,6 +83,14 @@ h1 {
   color: #fefefe;
 }
 
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  display: none; 
+  justify-content: center;
+}
+
 .background-wrapper {
   position: fixed;
   top: 0;
