@@ -12,18 +12,25 @@ Podes jugarlo offline desde [acá](https://world-flag-quest.vercel.app/)
 
 ## Deployment
 
-Para correr este proyecto deberas instalar las siguientes dependencias.
+Clona el proyecto
 
 ```bash
-  npm install
+  git clone https://github.com/Apolo26/WorldFlagQuest.git
 ```
-luego
+
+Dirígete al directorio del proyecto
+
+```bash
+  cd WorldFlagQuest
+```
+
+Para correr este proyecto localmente deberas instalar las siguientes dependencias.
 
 ```bash
   npm install axios dotenv express gsap mongodb
 ```
 
-Deberás tener en cuenta que para utilizar este juego de manera ONLINE se necesitaria agregar tu propia base de datos.
+Deberás tener en cuenta que para utilizar este juego de manera ONLINE se necesitaria agregar un .env con tu propia URI.
 
 ```bash
 MONGODB_URI = tu key
