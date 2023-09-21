@@ -10,7 +10,7 @@ Desbloquea la gloria al ganar puntos y combatí por un lugar en el top 20 de los
 
 Podes jugarlo offline desde [acá](https://world-flag-quest.vercel.app/)
 
-## Deployment
+## Run Locally
 
 Clona el proyecto
 
