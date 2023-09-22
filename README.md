@@ -1,4 +1,4 @@
-![Logo](https://i.ibb.co/y4pWDzR/banner.png)
+![Logo](https://i.ibb.co/y4pWDzR/banner.png](https://i.ibb.co/pXc3fRK/Sin-t-tulo-1-BEwx-Cn-Cpq-transformed.jpg))
 
 
 ¡Demostra tus conocimientos geográficos! 
